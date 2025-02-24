@@ -1,0 +1,20 @@
+[project]
+name = "using-langgraph"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Hammad", email = "devhammad.m@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "langgraph>=0.2.74",
+]
+
+[project.scripts]
+using-langgraph = "using_langgraph:main"
+say = "using_langgraph.promp_chaining.prompt_chaining:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
