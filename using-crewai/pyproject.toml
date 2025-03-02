@@ -1,0 +1,21 @@
+[project]
+name = "using-crewai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Hammad", email = "devhammad.m@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "crewai>=0.102.0",
+    "litellm>=1.60.2",
+]
+
+[project.scripts]
+using-crewai = "using_crewai:main"
+chain = "using_crewai.prompt_chaining.prompt_chaining:kickoff"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
