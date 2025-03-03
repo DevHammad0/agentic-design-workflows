@@ -15,7 +15,13 @@ dependencies = [
 [project.scripts]
 using-crewai = "using_crewai:main"
 chain = "using_crewai.prompt_chaining.prompt_chaining:kickoff"
+router = "using_crewai.routerflow.router:kickoff"
+para = "using_crewai.parallelization.para:kickoff"
+orchest = "using_crewai.orchestrator.orchestrator:kickoff"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/using_crewai"]
